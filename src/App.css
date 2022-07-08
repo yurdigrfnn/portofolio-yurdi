@@ -1,7 +1,30 @@
 .App {
   text-align: center;
 }
+.active {
+  color: darkcyan;
+}
+.noactive {
+  color: mediumpurple;
+}
+.noactive:hover {
+  color: darkcyan;
+  transition: ease-in;
+  transition-duration: 500ms;
+  
+}
+@media (min-width : 768px) {
+  .active {
+    border-bottom: 2px#61dafb solid;
 
+  }
+}
+@media (max-width : 768px) {
+  .textnone { 
+    display: none;
+    
+  }
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
