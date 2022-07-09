@@ -4,9 +4,14 @@ module.exports = {
     './src/**/*.{js,jsx,ts,tsx}'
   ],
   theme: {
-    extend: {},
+    extend: {
+      boxShadow: {
+        '3xl' : '0px 0px 25px 0px rgb(0 0 0 / 0.50)'
+      }
+    },
     fontFamily: {
-      'costum': ['Kdam Thmor Pro', 'sans-serif']
+      'costum': ['Kdam Thmor Pro', 'sans-serif'],
+      'nama' : ['Edu QLD Beginner','cursive']
     }
   },
   plugins: [
