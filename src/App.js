@@ -8,16 +8,21 @@ import Swithcer from './pages/components/switcher';
 // import homeLogo from './home.svg'
 import {AiOutlineHome,AiOutlineProject,AiOutlineProfile,AiOutlineBook} from 'react-icons/ai'
 import DetailsProject from './pages/DetailsProject';
+import NotFound from './pages/NotFound';
 
 
 
 function App() { 
+  const nama = {
+    nama : '{ YRD }'
+  }
+  
   return (
     <div className='flex flex-col justify-between min-h-screen dark:bg-slate-800'>
       <div className='container mx-auto relative'>
         <div className='mx-auto w-11/12 mt-10 lg:w-9/12 flex justify-between md:absolute md:left-0 right-0'>
-          <h1 className='text-4xl font-bold text-sky-600'>Yrd</h1>
-          <div className='bg-indigo-800 p-2 rounded-xl'>
+          <h1 className='text-4xl font-bold bg-gradient-to-tr from-sky-600 to-sky-300 bg-clip-text text-transparent font-nama'>{nama.nama}</h1>
+          <div className='dark:bg-slate-500 bg-gradient-to-tr from-sky-600 to-sky-300 p-2 rounded-xl'>
             <Swithcer />
           </div>
         </div>
@@ -25,25 +30,25 @@ function App() {
           <li className='inline-block noactive'>
             <NavLink to='/' activeClassName='active'>
               <AiOutlineHome size={30} className='md:hidden'/>
-              <span className='text-xl textnone'>Home</span>
+              <span className='text-xl textnone font-bold'>Home</span>
             </NavLink>
           </li>
           <li className='inline-block noactive'>
             <NavLink to='/project' activeClassName='active'>
               <AiOutlineProject  size={30} className='md:hidden' />
-              <span className='text-xl textnone'>Project</span>
+              <span className='text-xl textnone font-bold'>Project</span>
             </NavLink>
           </li>
           <li className='inline-block noactive'>
             <NavLink to='/blog' activeClassName='active'>
               <AiOutlineBook size={30} className='md:hidden'/>
-              <span className='text-xl textnone'>Blog</span>
+              <span className='text-xl textnone font-bold'>Blog</span>
             </NavLink>
           </li>
           <li className='inline-block noactive'>
             <NavLink to='/contact' activeClassName='active'>
               <AiOutlineProfile size={30} className='md:hidden' />
-              <span className='text-xl textnone'>Contact</span>
+              <span className='text-xl textnone font-bold'>Contact</span>
             </NavLink>
           </li>
         </div>
@@ -51,7 +56,7 @@ function App() {
           <Route path="/" element={<About />} />
           <Route path="/project" element={<Project />} />
           <Route path='blog/:slug' element={<DetailsProject />} />
-          
+          <Route path="*" element={<NotFound />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
