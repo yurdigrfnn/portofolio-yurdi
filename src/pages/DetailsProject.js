@@ -76,7 +76,6 @@ export default function DetailsProject(){
                         <div className='dark:text-white mt-3' dangerouslySetInnerHTML={createMarkup()} />
                     </div>
                 )}
-                
            </>
         )
      
