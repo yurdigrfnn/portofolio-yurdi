@@ -31,7 +31,11 @@ export default function DetailsProject(){
 
     },[parasms])
 
-   
+    function createMarkup() {
+        return {__html: article.data.content};
+    }
+
+
 
         if(notFound){
             return (
@@ -43,7 +47,8 @@ export default function DetailsProject(){
                  </section>
                 )
             }
-
+        
+            
         return (
      
             <>
@@ -68,10 +73,14 @@ export default function DetailsProject(){
                             <span className='py-1 px-2 bg-cyan-700 rounded-md font-semibold dark:text-white'>{article.data.category}</span>
                             <span className='dark:text-white'>{new Date(article.data.created_at).toLocaleDateString()}</span>
                         </div>
-                        <p className='dark:text-white mt-3'>{article.data.content}</p>
+                        <div className='dark:text-white mt-3' dangerouslySetInnerHTML={createMarkup()} />
                     </div>
                 )}
                 
            </>
         )
+     
+
+         
+    
 }
