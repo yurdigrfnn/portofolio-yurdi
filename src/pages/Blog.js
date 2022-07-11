@@ -48,9 +48,9 @@ export default function Blog(){
 
                     {!loading && (
                         <div className='mt-7 flex w-full flex-wrap'>
-                            {articles.map((items)=>(
+                            {[...articles].reverse().map((items)=>(
                                 <div className='w-full md:w-1/2 lg:w-1/3' key={items.id} data-aos = 'fade-up'>
-                                    <div className='mt-3 mr-2 dark:bg-slate-600 rounded-t-lg overflow-hidden shadow-md shadow-teal-700 hover:shadow-md group hover:scale-95 transition-all duration-700'>
+                                    <div className='md:mt-3 mt-7 md:mr-2 dark:bg-slate-600 rounded-t-lg overflow-hidden shadow-md shadow-teal-700 hover:shadow-md group hover:scale-95 transition-all duration-700'>
                                      <img src={items.image} alt="" className='bg-transparent h-[200px] w-full object-cover shadow-lg group-hover:scale-105 transition-all duration-700' />
                                 <div className='px-2 py-2'>
                                 <h1 className='dark:text-white pt-4 text-2xl'>{items.title}</h1>

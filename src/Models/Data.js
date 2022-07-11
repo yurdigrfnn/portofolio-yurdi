@@ -5,7 +5,7 @@ export const data =[
         title : 'Create E-commerce web app using LARAVEL',
         desk :'This web App create using laravel and boostrap, Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae ad at iusto ipsum exercitationem quidem laboriosam saepe commodi expedita asperiores',
         index : 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae ad, at iusto ipsum exercitationem quidem laboriosam saepe commodi expedita asperiores quibusdam quam reiciendis voluptas! Ipsam soluta consequatur eaque, perferendis quae laudantium dolorem obcaecati praesentium suscipit fuga ducimus? Obcaecati asperiores laudantium eos cumque, aliquid ad impedit in eligendi dolorem quis, porro aperiam sequi? Quidem fugit culpa earum obcaecati sapiente minima nostrum fuga enim iusto pariatur libero architecto repudiandae consectetur vero ipsam nisi in voluptatem eius voluptatum ex sed, eveniet ratione suscipit consequatur! Sit, sint quod laudantium vero pariatur nobis, hic sapiente voluptates perspiciatis impedit nihil fuga veniam quisquam omnis reprehenderit amet.',
-        
+        repo : 'https://github.com/yurdigrfnn/htmlcssdasar'
         
     },
     {
@@ -14,7 +14,7 @@ export const data =[
         title : 'Build todo app using php',
         desk :'This todo build by php only, Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae ad at iusto ipsum exercitationem quidem laboriosam saepe commodi expedita asperiores',
         index : 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae ad, at iusto ipsum exercitationem quidem laboriosam saepe commodi expedita asperiores quibusdam quam reiciendis voluptas! Ipsam soluta consequatur eaque, perferendis quae laudantium dolorem obcaecati praesentium suscipit fuga ducimus? Obcaecati asperiores laudantium eos cumque, aliquid ad impedit in eligendi dolorem quis, porro aperiam sequi? Quidem fugit culpa earum obcaecati sapiente minima nostrum fuga enim iusto pariatur libero architecto repudiandae consectetur vero ipsam nisi in voluptatem eius voluptatum ex sed, eveniet ratione suscipit consequatur! Sit, sint quod laudantium vero pariatur nobis, hic sapiente voluptates perspiciatis impedit nihil fuga veniam quisquam omnis reprehenderit amet.',
-        
+        repo : 'https://github.com/yurdigrfnn/htmlcssdasar'
         
     },
     {
@@ -23,7 +23,7 @@ export const data =[
         title : 'Make Todo use React js',
         desk :'This web App create using laravel and boostrap, Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae ad at iusto ipsum exercitationem quidem laboriosam saepe commodi expedita asperiores',
         index : 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae ad, at iusto ipsum exercitationem quidem laboriosam saepe commodi expedita asperiores quibusdam quam reiciendis voluptas! Ipsam soluta consequatur eaque, perferendis quae laudantium dolorem obcaecati praesentium suscipit fuga ducimus? Obcaecati asperiores laudantium eos cumque, aliquid ad impedit in eligendi dolorem quis, porro aperiam sequi? Quidem fugit culpa earum obcaecati sapiente minima nostrum fuga enim iusto pariatur libero architecto repudiandae consectetur vero ipsam nisi in voluptatem eius voluptatum ex sed, eveniet ratione suscipit consequatur! Sit, sint quod laudantium vero pariatur nobis, hic sapiente voluptates perspiciatis impedit nihil fuga veniam quisquam omnis reprehenderit amet.',
-        
+        repo : 'https://github.com/yurdigrfnn/htmlcssdasar'
         
     },
     {
@@ -32,7 +32,7 @@ export const data =[
         title : 'Create MVC Template',
         desk :'This web App create using laravel and boostrap, Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae ad at iusto ipsum exercitationem quidem laboriosam saepe commodi expedita asperiores',
         index : 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae ad, at iusto ipsum exercitationem quidem laboriosam saepe commodi expedita asperiores quibusdam quam reiciendis voluptas! Ipsam soluta consequatur eaque, perferendis quae laudantium dolorem obcaecati praesentium suscipit fuga ducimus? Obcaecati asperiores laudantium eos cumque, aliquid ad impedit in eligendi dolorem quis, porro aperiam sequi? Quidem fugit culpa earum obcaecati sapiente minima nostrum fuga enim iusto pariatur libero architecto repudiandae consectetur vero ipsam nisi in voluptatem eius voluptatum ex sed, eveniet ratione suscipit consequatur! Sit, sint quod laudantium vero pariatur nobis, hic sapiente voluptates perspiciatis impedit nihil fuga veniam quisquam omnis reprehenderit amet.',
-        
+        repo : 'https://github.com/yurdigrfnn/htmlcssdasar'
         
     },
     {
@@ -41,7 +41,7 @@ export const data =[
         title : 'Create  React + Tailwind css template',
         desk :'This web App create using laravel and boostrap, Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae ad at iusto ipsum exercitationem quidem laboriosam saepe commodi expedita asperiores',
         index : 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae ad, at iusto ipsum exercitationem quidem laboriosam saepe commodi expedita asperiores quibusdam quam reiciendis voluptas! Ipsam soluta consequatur eaque, perferendis quae laudantium dolorem obcaecati praesentium suscipit fuga ducimus? Obcaecati asperiores laudantium eos cumque, aliquid ad impedit in eligendi dolorem quis, porro aperiam sequi? Quidem fugit culpa earum obcaecati sapiente minima nostrum fuga enim iusto pariatur libero architecto repudiandae consectetur vero ipsam nisi in voluptatem eius voluptatum ex sed, eveniet ratione suscipit consequatur! Sit, sint quod laudantium vero pariatur nobis, hic sapiente voluptates perspiciatis impedit nihil fuga veniam quisquam omnis reprehenderit amet.',
-        
+        repo : 'https://github.com/yurdigrfnn/htmlcssdasar'
         
     },
     {
@@ -50,7 +50,7 @@ export const data =[
         title : 'Create Single Page Application with React',
         desk :'This web App create using laravel and boostrap, Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae ad at iusto ipsum exercitationem quidem laboriosam saepe commodi expedita asperiores',
         index : 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae ad, at iusto ipsum exercitationem quidem laboriosam saepe commodi expedita asperiores quibusdam quam reiciendis voluptas! Ipsam soluta consequatur eaque, perferendis quae laudantium dolorem obcaecati praesentium suscipit fuga ducimus? Obcaecati asperiores laudantium eos cumque, aliquid ad impedit in eligendi dolorem quis, porro aperiam sequi? Quidem fugit culpa earum obcaecati sapiente minima nostrum fuga enim iusto pariatur libero architecto repudiandae consectetur vero ipsam nisi in voluptatem eius voluptatum ex sed, eveniet ratione suscipit consequatur! Sit, sint quod laudantium vero pariatur nobis, hic sapiente voluptates perspiciatis impedit nihil fuga veniam quisquam omnis reprehenderit amet.',
-        
+        repo : 'https://github.com/yurdigrfnn/htmlcssdasar'
         
     }
 ]
