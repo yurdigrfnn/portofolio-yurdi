@@ -13,15 +13,12 @@ export default function Swithcer(){
   };
 
   return (
-    <>
         <div>
             <DarkModeSwitch
                 checked= {darkSide}
                 onChange = {toggleDarkMode}
                 size = {24}
             />
-
         </div>
-    </>
   );
 }

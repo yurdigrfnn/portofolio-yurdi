@@ -1,67 +1,10 @@
-import { Routes ,Route,NavLink } from 'react-router-dom';
-import './App.css';
-import About from './pages/About';
-import Project from './pages/Project';
-import Blog from './pages/Blog';
-import Contact from './pages/Contact';
-import Swithcer from './pages/components/switcher';
-// import homeLogo from './home.svg'
-import {AiOutlineHome,AiOutlineProject,AiOutlineProfile,AiOutlineBook} from 'react-icons/ai'
-import DetailsProject from './pages/DetailsProject';
-import NotFound from './pages/NotFound';
 
 
 
-function App() { 
-  const nama = {
-    nama : '{ YRD }'
-  }
-  
-  return (
-    <div className='flex flex-col justify-between min-h-screen dark:bg-slate-800'>
-      <div className='container mx-auto relative'>
-        <div className='mx-auto w-11/12 mt-10 lg:w-9/12 flex justify-between md:absolute md:left-0 right-0'>
-          <h1 className='text-4xl font-bold bg-gradient-to-tr from-sky-600 to-sky-300 bg-clip-text text-transparent font-nama'>{nama.nama}</h1>
-          <div className='dark:bg-slate-500 bg-gradient-to-tr from-sky-600 to-sky-300 p-2 rounded-xl'>
-            <Swithcer />
-          </div>
-        </div>
-        <div className='fixed bottom-0 left-0 right-0 w-full md:mt-10 md:pt-1 dark:bg-slate-900 md:dark:bg-transparent md:bg-transparent bg-slate-200 rounded-t-xl md:bottom-auto md:relative md:container md:mx-auto md:top-0 md:w-1/2 z-[10000] border-t border-slate-400 md:border-none md:px-10 lg:px-14 flex justify-between px-8 py-5 items-center md:justify-between sm:px-12'>
-          <li className='inline-block noactive'>
-            <NavLink to='/' activeClassName='active'>
-              <AiOutlineHome size={30} className='md:hidden'/>
-              <span className='text-xl textnone font-bold'>Home</span>
-            </NavLink>
-          </li>
-          <li className='inline-block noactive'>
-            <NavLink to='/project' activeClassName='active'>
-              <AiOutlineProject  size={30} className='md:hidden' />
-              <span className='text-xl textnone font-bold'>Project</span>
-            </NavLink>
-          </li>
-          <li className='inline-block noactive'>
-            <NavLink to='/blog' activeClassName='active'>
-              <AiOutlineBook size={30} className='md:hidden'/>
-              <span className='text-xl textnone font-bold'>Blog</span>
-            </NavLink>
-          </li>
-          <li className='inline-block noactive'>
-            <NavLink to='/contact' activeClassName='active'>
-              <AiOutlineProfile size={30} className='md:hidden' />
-              <span className='text-xl textnone font-bold'>Contact</span>
-            </NavLink>
-          </li>
-        </div>
-        <Routes>
-          <Route path="/" element={<About />} />
-          <Route path="/project" element={<Project />} />
-          <Route path='blog/:slug' element={<DetailsProject />} />
-          <Route path="*" element={<NotFound />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </div>
-      <footer className='mt-24 bg-slate-900'>
+
+export default function Footer() {
+    return (
+        <footer className='mt-24 bg-slate-900'>
         <div className='flex justify-center content-center'>
         <div className='w-full pt-10 border-t border-slate-700'>
                 <div className='flex items-center justify-center gap-5 mb-5'>
@@ -82,9 +25,5 @@ function App() {
             </div>
         </div>
       </footer>
-    </div>
-    
-  );
+    )
 }
-
-export default App;
