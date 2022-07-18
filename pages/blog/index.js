@@ -1,8 +1,7 @@
 import { useEffect,useState } from 'react';
-import { NavLink } from 'react-router-dom';
 import {BsBoxArrowUpRight} from 'react-icons/bs'
-
-
+import Link from 'next/link';
+import Layout from '../../components/Layout/Layout';
 
 
 export default function Blog(){
@@ -20,8 +19,7 @@ export default function Blog(){
 
 
             setArticles(res);
-            
-            
+                     
         }
         
         getArticles();
@@ -31,12 +29,12 @@ export default function Blog(){
     },[setArticles])
 
     return (
+        <Layout title='Blog'>
         <div className='container flex flex-col' data-aos ='fade-up'>
             <div className='mx-auto w-11/12 lg:w-9/12'>
                 <div className='mt-14'>
                     <h1 className='text-3xl dark:text-white font-semibold'>Blog</h1>
                 </div> 
-                
                     {loading && (
                         <div className='grid h-full mt-28'>
                         <svg role="status" className="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600 container m-auto" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -56,7 +54,7 @@ export default function Blog(){
                                 <h1 className='dark:text-white pt-4 text-2xl'>{items.title}</h1>
                                 <span className='inline-block mt-3 dark:text-white py-2 px-3 rounded-sm bg-cyan-700'>{items.category}</span>
                                 <p className=' py-2 dark:text-white text-base'>{items.summary}</p>
-                                <div className='flex justify-between'><div className='flex justify-end'><NavLink to={items.slug} className='mt-2' ><BsBoxArrowUpRight size={30} color='#61dafb' /></NavLink></div>
+                                <div className='flex justify-between'><div className='flex justify-end'><Link href={`blog/${items.slug}`} className='mt-2' ><BsBoxArrowUpRight size={30} color='#61dafb' /></Link></div>
                             </div>
                         </div>
                      </div>
@@ -70,6 +68,7 @@ export default function Blog(){
                 
             </div>
         </div>
+        </Layout>
 
         // <div className='container flex flex-col'>
         //     <div className='mx-auto w-11/12 lg:w-9/12 pt-14'>

@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react'
 import {DiJava, DiJavascript1} from 'react-icons/di';
 import {BsBoxArrowUpRight} from 'react-icons/bs'
-import { data } from '../Models/Data';
+import { data } from '../../Models/Data';
 import AOS from 'aos';
 import 'aos/dist/aos.css'
 import {GoRepoClone} from 'react-icons/go'
 import {AiOutlineStar} from 'react-icons/ai'
+import Layout from '../../components/Layout/Layout';
 
 export default function Project(){
     const [repos,setRepos] = useState([])
@@ -28,6 +29,7 @@ export default function Project(){
 
     
     return (
+    <Layout title='Project'>
         <div className='container flex flex-col' data-aos ='fade-up'>
             <div className='mx-auto w-11/12 lg:w-9/12'>
                 <div className='mt-14'>
@@ -72,10 +74,10 @@ export default function Project(){
                             </div>
                         </div>
                     </div>
-                    ))}
-                    
+                    ))} 
                 </div>
             </div>
         </div>
+        </Layout>
     )
 }

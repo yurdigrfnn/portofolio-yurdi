@@ -3,6 +3,7 @@ import {MdOutlineMailOutline,MdLocationCity} from 'react-icons/md'
 import {AiOutlineWhatsApp} from 'react-icons/ai'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import Layout from '../../components/Layout/Layout';
 export default function Contact(){
     useEffect(()=>{
         document.title = 'Contact Me';
@@ -11,6 +12,7 @@ export default function Contact(){
 
     },[])
     return (
+        <Layout title='Contact Me'>
         <div className='container flex flex-col' data-aos='fade-up'>
             <div className='mx-auto w-11/12 lg:w-9/12 pt-14'>
                 <h1 className='text-2xl dark:text-white font-semibold'>Contact</h1>
@@ -21,5 +23,6 @@ export default function Contact(){
                 </ul>
             </div>
         </div>
+        </Layout>
     )
 }

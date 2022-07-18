@@ -3,6 +3,7 @@ import {MdChevronLeft,MdChevronRight} from 'react-icons/md'
 import { data } from '../Models/Data';
 import AOS from 'aos';
 import 'aos/dist/aos.css'
+import Layout from '../components/Layout/Layout';
 
 export default function About(){
     const slideLeft = () => {
@@ -20,6 +21,7 @@ export default function About(){
         document.title = 'About Me';
     },[])
     return (
+      <Layout title='About Me'>
         <div className="container flex flex-col" data-aos='fade-up'>
             <div className="mx-auto w-11/12 mt-40 box-content lg:w-9/12">
                 <h1 className="text-5xl font-bold lg:text-6xl dark:text-white ">Hai, im <span className="bg-gradient-to-r from-cyan-600 to-sky-500 bg-clip-text text-transparent">Yurdiansyah</span></h1>
@@ -68,5 +70,6 @@ export default function About(){
                 </div>
             </div>
         </div>
+        </Layout>
     )
 }

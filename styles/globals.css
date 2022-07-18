@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: "Edu QLD Beginner";
+  src: url("https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner:wght@500&display=swap");
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.active {
+  color : 'red';
+}
+
+#__next {
+  height:100%;
+}
+
+.App {
+  text-align: center;
+}
+.active {
+  color: darkcyan;
+}
+.noactive {
+  color: mediumpurple;
+}
+.noactive:hover {
+  color: darkcyan;
+  transition: ease-in;
+  transition-duration: 500ms;
+  
+}
+@media (min-width : 768px) {
+  .active {
+    border-bottom: 2px#61dafb solid;
+
+  }
+}
+@media (max-width : 768px) {
+  .textnone { 
+    display: none;
+    
+  }
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
