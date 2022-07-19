@@ -62,7 +62,7 @@ export default function Blog(data){
 }
 
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const request = await fetch('https://api-blog-yurdi.herokuapp.com/api/post');
     const data = await request.json();
     return {
