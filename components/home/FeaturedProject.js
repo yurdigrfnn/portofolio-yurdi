@@ -1,5 +1,5 @@
 import {MdChevronLeft,MdChevronRight} from 'react-icons/md'
-import { data } from '../../DataMockup/data';
+import { data } from '../../DataMockup/Data';
 
 export default function FeaturedProject(){
     const slideLeft = () => {

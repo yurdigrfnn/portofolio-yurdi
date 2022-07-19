@@ -7,7 +7,7 @@ export default function Navbar() {
     const router = useRouter();
     const nama = {
         nama : '{ YRD }'
-      }
+      } 
     return (
     <div className='container mx-auto relative'>
         <div className='mx-auto w-11/12 lg:w-9/12 mt-10 md:mt-0 flex justify-between md:absolute md:left-0 right-0'>

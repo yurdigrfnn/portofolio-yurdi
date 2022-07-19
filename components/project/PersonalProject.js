@@ -1,4 +1,4 @@
-import { data } from '../../DataMockup/data'
+import { data } from '../../DataMockup/Data'
 import {DiJava, DiJavascript1} from 'react-icons/di';
 import {BsBoxArrowUpRight} from 'react-icons/bs'
 export default function PersonalProject() {
