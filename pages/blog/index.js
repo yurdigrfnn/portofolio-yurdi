@@ -4,29 +4,17 @@ import Link from 'next/link';
 import Layout from '../../components/Layout/Layout';
 
 
-export default function Blog(){
+export default function Blog(data){
     const [articles,setArticles] = useState([]);
     const [loading,setLoading] = useState(true);
     
 
     useEffect(function() {
-        document.title = 'Blog';
-        async function getArticles() {
-            const request = await fetch('https://api-blog-yurdi.herokuapp.com/api/post');
-            const response = await request.json();
-            const res = response.data;
+            const res = data.data;
             setLoading(false);
-
-
             setArticles(res);
-                     
-        }
-        
-        getArticles();
-        
-        
-        
-    },[setArticles])
+                         
+    },[setArticles,data])
 
     return (
         <Layout title='Blog'>
@@ -35,6 +23,7 @@ export default function Blog(){
                 <div className='mt-14'>
                     <h1 className='text-3xl dark:text-white font-semibold'>Blog</h1>
                 </div> 
+                
                     {loading && (
                         <div className='grid h-full mt-28'>
                         <svg role="status" className="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600 container m-auto" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -54,7 +43,7 @@ export default function Blog(){
                                 <h1 className='dark:text-white pt-4 text-2xl'>{items.title}</h1>
                                 <span className='inline-block mt-3 dark:text-white py-2 px-3 rounded-sm bg-cyan-700'>{items.category}</span>
                                 <p className=' py-2 dark:text-white text-base'>{items.summary}</p>
-                                <div className='flex justify-between'><div className='flex justify-end'><Link href={`blog/${items.slug}`} className='mt-2' ><BsBoxArrowUpRight size={30} color='#61dafb' /></Link></div>
+                                <div className='flex justify-between'><div className='flex justify-end'><Link href={`/blog/${items.slug}`} className='mt-2' ><BsBoxArrowUpRight size={30} color='#61dafb' /></Link></div>
                             </div>
                         </div>
                      </div>
@@ -69,16 +58,15 @@ export default function Blog(){
             </div>
         </div>
         </Layout>
-
-        // <div className='container flex flex-col'>
-        //     <div className='mx-auto w-11/12 lg:w-9/12 pt-14'>
-        //         {articles.map((article)=>
-        //             <>
-        //             <p className='text-xl dark:text-white' key={article.id}>{article.title}</p>
-        //             <p><Link to={article.slug}>Details</Link></p></>
-        //         )}
-        //     </div>
-            
-        // </div>
     )
 }
+
+
+export async function getStaticProps() {
+    const request = await fetch('https://api-blog-yurdi.herokuapp.com/api/post');
+    const data = await request.json();
+    return {
+
+      props: data, // will be passed to the page component as props
+    }
+  }

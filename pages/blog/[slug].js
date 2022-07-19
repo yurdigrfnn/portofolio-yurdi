@@ -5,53 +5,48 @@ import Layout from '../../components/Layout/Layout';
 
 
 
-export default function DetailsBlog(){
+export default function DetailsBlog(data) {
     const router = useRouter();
     const [article,setArticle] = useState({});
-    const [notFound,setNotFound] = useState(false)
+    // const [notFound,setNotFound] = useState(false)
     const [loading,setLoading] = useState(true);
+    console.log(data);
     
-    
-
     useEffect(()=>{
-        async function getArticles() {
-            const request = await fetch(`https://api-blog-yurdi.herokuapp.com/api/post/${router.query.slug}`);
-
-            if(!request.ok){
-                setLoading(false)
-                return setNotFound(true);
-            }
-            const response = await request.json();
+        // async function getArticles() {
+        //     const request = await fetch(`https://api-blog-yurdi.herokuapp.com/api/post/${router.query.slug}`);
+            // if(!data.ok){
+            //     setLoading(false)
+            //     return setNotFound(true);
+            // }
+        //     const response = await request.json();
             
-            setArticle(response);
-            setLoading(false);
-        }
+        //     setArticle(response);
+        //     setLoading(false);
+        // }
         
-        getArticles();
+        // getArticles();
+        setArticle(data.data);
+        setLoading(false);
 
 
-    },[router])
+    },[router,data])
 
     function createMarkup() {
-        return {__html: article.data.content};
+        return {__html: article.content};
     }
-
-
-
-        if(notFound){
-            return (
-                <Layout title='404'>
-                <section className="container mx-auto md:w-10/12 w-11/12 pt-9">
-                    <div className='flex justify-center items-center'>
-                        <h1 className="dark:text-white md:font-bold md:text-3xl font-semibold text-2xl">Not Found Article : {router.query.slug}  </h1>
+        // if(notFound){
+        //     return (
+        //         <Layout title='404'>
+        //         <section className="container mx-auto md:w-10/12 w-11/12 pt-9">
+        //             <div className='flex justify-center items-center'>
+        //                 <h1 className="dark:text-white md:font-bold md:text-3xl font-semibold text-2xl">Not Found Article : {router.query.slug}  </h1>
                         
-                     </div>
-                 </section>
-                </Layout>
-                )
-            }
-        
-            
+        //              </div>
+        //          </section>
+        //         </Layout>
+        //         )
+        //     }    
         return (
      
             <>
@@ -67,17 +62,17 @@ export default function DetailsBlog(){
                 )}
 
                 {!loading && (
-                    <Layout title={article.data.title}>
+                    <Layout title={article.title}>
                     <div className='container mx-auto w-11/12 lg:w-9/12 pt-14'>
                         <Helmet>
                             <meta charSet="utf-8" />
-                            <title>{article.data.title}</title>
+                            <title>{article.title}</title>
                         </Helmet>
-                        <h1 className='text-3xl dark:text-white font-bold'>{article.data.title}</h1>
-                        <img src={article.data.image} className='mt-10 rounded-md' alt="" />
+                        <h1 className='text-3xl dark:text-white font-bold'>{article.title}</h1>
+                        <img src={article.image} className='mt-10 rounded-md' alt="" />
                         <div className='flex justify-between md:justify-start md:gap-2 mt-2'>
-                            <span className='py-1 px-2 bg-cyan-700 rounded-md font-semibold dark:text-white'>{article.data.category}</span>
-                            <span className='dark:text-white'>{new Date(article.data.created_at).toLocaleDateString()}</span>
+                            <span className='py-1 px-2 bg-cyan-700 rounded-md font-semibold dark:text-white'>{article.category}</span>
+                            <span className='dark:text-white'>{new Date(article.created_at).toLocaleDateString()}</span>
                         </div>
                         <div className='dark:text-white mt-3' dangerouslySetInnerHTML={createMarkup()} />
                     </div>
@@ -90,3 +85,30 @@ export default function DetailsBlog(){
          
     
 }
+
+export async function getStaticPaths() {
+    // Call an external API endpoint to get posts
+    const res = await fetch('https://api-blog-yurdi.herokuapp.com/api/post')
+    const posts = await res.json()
+    const data = posts.data;
+
+  
+    // Get the paths we want to pre-render based on posts
+    const paths = data.map((post) => ({
+      params: { slug: post.slug },
+    }))
+  
+    // We'll pre-render only these paths at build time.
+    // { fallback: false } means other routes should 404.
+    return { paths, fallback: false }
+  }
+  
+  // This also gets called at build time
+  export async function getStaticProps({ params }) {
+    // params contains the post `id`.
+    // If the route is like /posts/1, then params.id is 1
+    const res = await fetch(`https://api-blog-yurdi.herokuapp.com/api/post/${params.slug}`)
+    const post = await res.json()
+    // Pass post data to the page via props
+    return { props:  post  }
+  }

@@ -9,12 +9,13 @@ export default function Layout({children,title}) {
         <Head>
             <title>{title}</title>
         </Head>
-        <div className='flex flex-col justify-between min-h-screen dark:bg-slate-800'>
-            <Navbar />
-            <div className='container mx-auto'>
-                {children}
-            </div>
-            
+        <div className='min-h-screen dark:bg-slate-800 flex justify-between flex-col'>
+                <div>
+                    <Navbar />
+                    <div className='container mx-auto'>
+                        {children}
+                    </div>  
+                </div>
             <Footer />
         </div>
         </>
