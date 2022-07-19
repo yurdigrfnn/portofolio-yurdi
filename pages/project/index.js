@@ -21,7 +21,7 @@ export default function Project(res){
 }
 
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const request = await fetch('https://api.github.com/users/yurdigrfnn/repos');
     const res = await request.json();
     return {
